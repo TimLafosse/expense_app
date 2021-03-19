@@ -8,13 +8,20 @@ import "numeral/locales/en-gb";
 // switch between locales
 numeral.locale('en-gb');
 
-export const ExpenseSummary = (props) => (
-   <div>Viewing {props.expenses.length} expense(s) totalling {numeral(getExpensesTotal(props.expenses) / 100).format('$0,0.00')} </div>
-   );
+
+export const ExpenseSummary = ({ getExpenseCount, formattedExpenseTotal }) => {
+  const expenseWord = getExpenseCount === 1 ? 'expense' : 'expenses';
+  return (
+    <div>Viewing {getExpenseCount} {expenseWord} totalling {formattedExpenseTotal} </div>
+     )
+}
+  
 
 const mapStateToProps = (state) => {
+  const expensesFromStore = selectExpenses(state.expenses, state.filters)
   return {
-    expenses: selectExpenses(state.expenses, state.filters)
+    getExpenseCount: expensesFromStore.length,
+    formattedExpenseTotal: numeral(getExpensesTotal(expensesFromStore) / 100).format('$0,0.00')
   };
 };
 
