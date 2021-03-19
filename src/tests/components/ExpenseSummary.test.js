@@ -9,6 +9,11 @@ test('count and total 2 expenses', () => {
 });
 
 test('count and total 1 expense', () => {
+  const wrapper = shallow(<ExpenseSummary expenses={[expenses[0]]} />);
+  expect(wrapper).toMatchSnapshot();
+});
+
+test('count and total 0 expenses', () => {
   const wrapper = shallow(<ExpenseSummary expenses={[]} />);
   expect(wrapper).toMatchSnapshot();
 });

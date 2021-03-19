@@ -1,45 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`count and total  expense 1`] = `
+exports[`count and total 0 expenses 1`] = `
 <div>
   Viewing 
   0
-   expenses totalling 
-  0
+   expense(s) totalling 
+  £0.00
+   
 </div>
 `;
 
 exports[`count and total 1 expense 1`] = `
 <div>
   Viewing 
-  0
-   expenses totalling 
-  0
+  1
+   expense(s) totalling 
+  £1.95
+   
 </div>
 `;
 
 exports[`count and total 2 expenses 1`] = `
 <div>
-  <ExpenseListItem
-    amount={195}
-    createdAt={0}
-    description="Gum"
-    id="1"
-    note=""
-  />
-  <ExpenseListItem
-    amount={109500}
-    createdAt={-345600000}
-    description="Rent"
-    id="2"
-    note=""
-  />
-  <ExpenseListItem
-    amount={4500}
-    createdAt={345600000}
-    description="Credit Card"
-    id="3"
-    note=""
-  />
+  Viewing 
+  3
+   expense(s) totalling 
+  £1,141.95
+   
 </div>
 `;
