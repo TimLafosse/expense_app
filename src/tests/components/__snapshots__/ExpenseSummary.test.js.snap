@@ -4,7 +4,9 @@ exports[`count and total 0 expenses 1`] = `
 <div>
   Viewing 
   0
-   expense(s) totalling 
+   
+  expenses
+   totalling 
   £0.00
    
 </div>
@@ -14,8 +16,10 @@ exports[`count and total 1 expense 1`] = `
 <div>
   Viewing 
   1
-   expense(s) totalling 
-  £1.95
+   
+  expense
+   totalling 
+  £1.25
    
 </div>
 `;
@@ -23,9 +27,11 @@ exports[`count and total 1 expense 1`] = `
 exports[`count and total 2 expenses 1`] = `
 <div>
   Viewing 
-  3
-   expense(s) totalling 
-  £1,141.95
+  2
+   
+  expenses
+   totalling 
+  £2.25
    
 </div>
 `;
